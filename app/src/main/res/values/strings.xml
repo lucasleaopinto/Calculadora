@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculadora SDM KT</string>
+    <string name="zero">0</string>
+    <string name="ponto">.</string>
+    <string name="equal">=</string>
+    <string name="division">/</string>
+    <string name="multiplication">x</string>
+</resources>
