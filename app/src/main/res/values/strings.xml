@@ -5,4 +5,9 @@
     <string name="equal">=</string>
     <string name="division">/</string>
     <string name="multiplication">x</string>
+
+    <string-array name="tipo_leiaute">
+        <item>Básico</item>
+        <item>Avançado</item>
+    </string-array>
 </resources>
