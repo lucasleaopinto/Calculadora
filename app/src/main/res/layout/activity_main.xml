@@ -3,142 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/lcdtv"
+    <!-- Toolbar que substitui a SupportActionBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:hint="0"
-        android:inputType="numberDecimal"
-        android:textAlignment="textEnd"
-        android:textSize="50sp" />
+        android:layout_height="?actionBarSize">
+        <include layout="@layout/toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <!-- Leiaute que será ocupado pelos Fragments -->
+    <FrameLayout
+        android:id="@+id/calculadoraFl"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnSeven"
-            style="@style/CalcButton"
-            android:text="@string/seven" />
-
-        <Button
-            android:id="@+id/btnEight"
-            style="@style/CalcButton"
-            android:text="@string/eight" />
-
-        <Button
-            android:id="@+id/btnNine"
-            style="@style/CalcButton"
-            android:text="@string/nine" />
-
-        <Button
-            android:id="@+id/btnAdicao"
-            style="@style/CalcButton"
-            android:textColor="@android:color/holo_blue_dark"
-            android:background="@drawable/drawable_calculator"
-            android:text="@string/plus" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnFour"
-            style="@style/CalcButton"
-            android:onClick="onClickBtNum"
-            android:text="@string/four" />
-
-        <Button
-            android:id="@+id/btnFive"
-            style="@style/CalcButton"
-            android:onClick="onClickBtNum"
-            android:text="@string/five" />
-
-        <Button
-            android:id="@+id/btnSix"
-            style="@style/CalcButton"
-            android:onClick="onClickBtNum"
-            android:text="@string/six" />
-
-        <Button
-            android:id="@+id/btnSub"
-            style="@style/CalcButton"
-            android:onClick="onClickBtSub"
-            android:textColor="@android:color/holo_red_dark"
-            android:text="@string/minus" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnOne"
-            style="@style/CalcButton"
-            android:layout_weight="1"
-            android:text="@string/one" />
-
-        <Button
-            android:id="@+id/btnTwo"
-            style="@style/CalcButton"
-            android:text="@string/two" />
-
-        <Button
-            android:id="@+id/btnThree"
-            style="@style/CalcButton"
-            android:text="@string/three" />
-
-        <Button
-            android:id="@+id/btnMult"
-            style="@style/CalcButton"
-            android:textColor="@android:color/holo_orange_dark"
-            android:text="@string/multiplication" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnZero"
-            style="@style/CalcButton"
-            android:text="@string/zero" />
-
-        <Button
-            android:id="@+id/btnDot"
-            style="@style/CalcButton"
-            android:textColor="@android:color/holo_blue_dark"
-            android:text="@string/dot" />
-
-        <Button
-            android:id="@+id/btnEqu"
-            style="@style/CalcButton"
-            android:textColor="@android:color/holo_green_dark"
-            android:text="@string/equal" />
-
-        <Button
-            android:id="@+id/btnDiv"
-            style="@style/CalcButton"
-            android:textColor="@android:color/holo_orange_light"
-            android:text="@string/division" />
-
-    </LinearLayout>
-
-
+        android:layout_height="match_parent" />
 </LinearLayout>
