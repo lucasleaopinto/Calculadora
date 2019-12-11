@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.Menu
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.edu.ifsp.scl.R
 import br.edu.ifsp.scl.controler.ConfiguracaoController
@@ -59,6 +60,7 @@ class ConfiguracaoActivity : AppCompatActivity() {
         configuracaoController.salvaConfiguracao(novaConfiguracao)
 
         //Chamar a controller para salvar
+      //  Toast.makeText(this,"Configuração Salva",Toast).show()
     }
 
 }
